@@ -26,11 +26,8 @@ Earlier documentation stated 103 tests and 471 assertions. Those historical coun
 
 Browser-based checkout and mobile interaction remain manual release checks. The screenshot gallery and captioned product tour document the current user experience; see [media provenance](DEMO.md).
 
-## Changes reviewed
+## Release hardening
 
-- Retained the active Laravel application, migrations, tests, lockfiles and license.
-- Removed the old Node/Express application, installed dependencies from the deliverable, database backups, build/runtime files and machine-specific work notes.
-- Removed unreachable frontend starter components and the unconfigured SSR entrypoint.
 - Fixed the login form's Remember me binding and added a show/hide password control.
 - Added a keyboard skip link, chart series labels and a chart empty state; disabled chart animation so the whole series appears immediately.
 - Corrected the quoted application name in the example environment.

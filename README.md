@@ -138,8 +138,6 @@ GitHub Actions runs the frontend and PHP checks against an isolated PostgreSQL s
 | `docs/` | Setup, architecture, operating notes, screenshots and product video |
 | `.github/workflows/` | Automated quality checks |
 
-The obsolete Node/Express application, installed dependencies, database backups, runtime files and machine-specific work logs are excluded. Lockfiles, migrations, tests and the license are retained.
-
 ## Scope and honest limitations
 
 FreshMart currently supports **single-store retail operations**, with BDT currency and Asia/Dhaka business-time settings. Multiple inventory locations are supported; separate branches and multi-tenant businesses are not implemented in this release.

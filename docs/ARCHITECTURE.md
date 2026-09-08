@@ -63,9 +63,3 @@ Mutations are recorded through the audit mechanism. Document numbers and links b
 Management reports read operational transactions, with CSV exports for further analysis. BDT and Asia/Dhaka are the configured business defaults. `erp:reconcile` checks related records across stock, sales, payment allocations, returns, purchasing, transfers and tills. Run it after demo seeding and as part of a release rehearsal.
 
 Reconciliation checks internal consistency; it does not independently confirm a bank settlement or a physical stock count. This version is not a double-entry accounting ledger.
-
-## Repository history
-
-FreshMart previously included a Node/Express/Prisma implementation alongside the current Laravel application. The duplicate application, its root workspace manifest, database backups, generated output and machine-specific notes were removed as part of the Laravel migration.
-
-Migrations, meaningful tests, dependency lockfiles and framework-required files are retained. Composer and npm dependencies are installed from their lockfiles rather than committed to the repository.
