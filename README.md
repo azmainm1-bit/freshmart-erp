@@ -150,4 +150,4 @@ A production deployment still needs environment-specific HTTPS, process supervis
 
 ## License
 
-[MIT](LICENSE). Demo records are fictional fixtures for local evaluation.
+[MIT](LICENSE). Demo records are fictional fixtures for development and testing.

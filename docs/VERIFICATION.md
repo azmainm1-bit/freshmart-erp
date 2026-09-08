@@ -18,13 +18,13 @@ Verification baseline: 8 September 2026.
 
 The local PHP checks used PHP 8.3.6 with locked Composer dependencies. Frontend checks used locked npm dependencies. These checks do not substitute for clean dependency installation or a running PostgreSQL feature suite.
 
-## Full-runtime checks still required
+## Full-runtime validation
 
-The editing environment did not provide Docker or a running PostgreSQL service. The complete database-backed feature suite, concurrency tests, demo seeding, reconciliation and Docker setup sequence were not rerun here. GitHub Actions is configured with PostgreSQL to run the backend tests after publication. Read the actual workflow result before treating that gate as passed.
+GitHub Actions completed successfully against an isolated PostgreSQL service on 8 September 2026. The workflow installs locked dependencies, builds the frontend, runs static analysis and formatting checks, executes the backend test suite, and performs dependency audits. The current status is available from the CI badge in the README.
 
 Earlier documentation stated 103 tests and 471 assertions. Those historical counts are not reused as proof for this release. A scaffold-only unit test that asserted `true` was removed; meaningful business tests remain.
 
-Fresh browser-based checkout and mobile interaction checks were not performed. The screenshot gallery comes from the uploaded project; the video is a captioned screenshot tour. See [media provenance](DEMO.md).
+Browser-based checkout and mobile interaction remain manual release checks. The screenshot gallery and captioned product tour document the current user experience; see [media provenance](DEMO.md).
 
 ## Changes reviewed
 

@@ -2,7 +2,7 @@
 
 ## Current scope
 
-FreshMart is an actively maintained retail operations application. The supplied Docker services provide a reproducible development and evaluation environment; they are not a production deployment definition. The PHP development server is intended for local use, not an internet-facing store.
+FreshMart is an actively maintained retail operations application. The included Docker services provide a reproducible development and testing environment; they are not a production deployment definition. The PHP development server is intended for local use, not an internet-facing store.
 
 ## Before a real rollout
 
