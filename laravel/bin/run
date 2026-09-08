@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Run Composer, Artisan, or PHP tools on this project's Compose network.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+exec docker compose run --rm --no-deps --user "$(id -u):$(id -g)" tooling "$@"

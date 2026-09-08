@@ -1,0 +1,42 @@
+:root {
+    --background: hsl(150 14% 97%);
+    --foreground: hsl(164 24% 12%);
+    --primary: hsl(160 70% 28%);
+    --primary-foreground: hsl(0 0% 100%);
+    --ring: hsl(160 70% 32%);
+    --sidebar-background: hsl(164 30% 12%);
+    --sidebar-foreground: hsl(150 12% 86%);
+    --sidebar-primary: hsl(155 60% 54%);
+    --sidebar-primary-foreground: hsl(164 30% 12%);
+    --sidebar-accent: hsl(163 25% 21%);
+    --sidebar-accent-foreground: hsl(0 0% 100%);
+    --sidebar-border: hsl(164 24% 23%);
+    --radius: 0.65rem;
+}
+.dark {
+    --background: hsl(164 15% 9%);
+    --card: hsl(164 13% 12%);
+    --primary: hsl(155 55% 64%);
+    --primary-foreground: hsl(164 35% 10%);
+    --sidebar-background: hsl(164 22% 8%);
+    --sidebar-accent: hsl(164 20% 18%);
+}
+@layer components {
+    .erp-input {
+        @apply border-input bg-background text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/20 w-full min-w-0 rounded-lg border px-3 py-2.5 text-sm font-normal shadow-xs outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60;
+    }
+}
+body { font-feature-settings: 'cv11', 'ss01'; }
+.print-only { display: none; }
+@media print {
+    @page { size: 80mm auto; margin: 4mm; }
+    body * { visibility: hidden; }
+    .print-receipt, .print-receipt * { visibility: visible; }
+    .print-receipt { position: absolute; top: 0; left: 0; width: 72mm; padding: 0; background: white; color: black; font: 10px monospace; }
+    .print-receipt table { font: 9px monospace; }
+    .print-receipt th, .print-receipt td { padding: 5px 2px; white-space: normal; }
+    .print-receipt th:nth-child(3), .print-receipt td:nth-child(3), .print-receipt th:nth-child(4), .print-receipt td:nth-child(4) { display: none; }
+    .print-receipt .overflow-x-auto { overflow: visible; }
+    .print-only { display: block; }
+    .no-print { display: none !important; }
+}

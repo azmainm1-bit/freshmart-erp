@@ -1,0 +1,11 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # Level 5: real bugs (type errors, undefined methods/properties, dead
+    # code) without the highest levels' churn on a fresh codebase — raise
+    # as the codebase matures (docs/ARCHITECTURE.md).
+    level: 5

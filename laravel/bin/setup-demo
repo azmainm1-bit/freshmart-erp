@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Start a fresh local demo without overwriting an existing environment or database.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+for command in docker node npm; do
+  command -v "$command" >/dev/null || { echo "Missing prerequisite: $command" >&2; exit 1; }
+done
+if [ -e .env ]; then
+  echo 'Setup stopped: .env already exists. Follow docs/SETUP.md for an existing installation.' >&2
+  exit 1
+fi
+cp .env.example .env
+docker compose up -d --wait postgres
+docker compose build tooling
+bin/run composer install --no-interaction --prefer-dist
+bin/run php artisan key:generate
+bin/run php artisan migrate
+bin/run php artisan db:seed
+npm ci
+npm run build
+bin/run php artisan erp:reconcile
+printf '\nDemo ready. Start it with: cd laravel && bin/serve-dev.sh\nOpen http://localhost:8000 and sign in with manager1 / manager123\n'
