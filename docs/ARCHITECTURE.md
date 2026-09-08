@@ -2,7 +2,7 @@
 
 ## One application, separate business responsibilities
 
-FreshMart uses Laravel for routing, validation, authorization and persistence. Inertia supplies page data to React without requiring a second independently deployed frontend API. React renders the interface in the browser; this package does not configure an Inertia server-side rendering process.
+FreshMart uses Laravel for routing, validation, authorization and persistence. Inertia supplies page data to React without requiring a second independently deployed frontend API. React renders the interface in the browser; the application does not currently configure an Inertia server-side rendering process.
 
 ```mermaid
 flowchart TD
@@ -64,8 +64,8 @@ Management reports read operational transactions, with CSV exports for further a
 
 Reconciliation checks internal consistency; it does not independently confirm a bank settlement or a physical stock count. This version is not a double-entry accounting ledger.
 
-## Repository cleanup
+## Repository history
 
-The source archive contained an earlier Node/Express/Prisma application alongside the active Laravel implementation. This portfolio package retains Laravel and removes the duplicate application, its root workspace manifest, database backups, generated output and machine-specific notes. The uploaded archive remains the original migration reference.
+FreshMart previously included a Node/Express/Prisma implementation alongside the current Laravel application. The duplicate application, its root workspace manifest, database backups, generated output and machine-specific notes were removed as part of the Laravel migration.
 
-Migrations, meaningful tests, dependency lockfiles and framework-required files remain. A generated `assertTrue(true)` example test and an unconfigured SSR entrypoint were removed. Composer and npm dependencies are installed from their lockfiles, not shipped inside the source ZIP.
+Migrations, meaningful tests, dependency lockfiles and framework-required files are retained. Composer and npm dependencies are installed from their lockfiles rather than committed to the repository.

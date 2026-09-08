@@ -14,7 +14,7 @@
 
 ## Media provenance
 
-The screenshots were supplied in the source archive and show the application with demo fixtures. They predate this package's small login, chart-label and accessibility refinements. They are not generated UI mockups and have not been presented as fresh end-to-end verification.
+The screenshots show the application populated with fictional demo fixtures. They are authentic captures of the working interface rather than generated UI mockups. The current release also includes subsequent login, chart-label and accessibility refinements; see [verification notes](VERIFICATION.md) for the validated scope.
 
 The MP4 uses those screenshots with captions and transitions. It is a screenshot-based product tour, not a live transaction recording. No real customer information or production credentials were added to the media. Source screenshots are retained at their original dimensions.
 

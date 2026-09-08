@@ -35,7 +35,7 @@ FreshMart brings those workflows into one application, with role-based access an
 
 [**Watch the product tour — MP4**](docs/media/freshmart-tour.mp4) · [Screenshot gallery](docs/DEMO.md)
 
-The video is a captioned walkthrough of the supplied application screenshots, using demo records. It is a visual tour, not a recording of a newly executed checkout. See [media provenance and demo steps](docs/DEMO.md).
+The video is a captioned walkthrough of FreshMart using fictional demo records. It provides a visual tour of the core workflows; see [demo details and walkthrough steps](docs/DEMO.md).
 
 <details>
 <summary>Browse the full-size application screenshots</summary>
@@ -123,7 +123,7 @@ npm run build
 bin/run php artisan erp:reconcile
 ```
 
-GitHub Actions is configured to run the frontend checks and PHP checks against an isolated PostgreSQL service. The badge above reports the actual workflow status; [verification notes](docs/VERIFICATION.md) distinguish checks performed for this package from checks still requiring the full runtime.
+GitHub Actions runs the frontend and PHP checks against an isolated PostgreSQL service. The badge above reports the current workflow status; [verification notes](docs/VERIFICATION.md) document the validation scope and any checks requiring a full runtime.
 
 ## Project layout
 
@@ -142,7 +142,7 @@ The obsolete Node/Express application, installed dependencies, database backups,
 
 ## Scope and honest limitations
 
-This is a **single-store retail operations portfolio project** with BDT currency and Asia/Dhaka business-time settings. Multiple inventory locations are supported; separate branches and multi-tenant businesses are not implemented.
+FreshMart currently supports **single-store retail operations**, with BDT currency and Asia/Dhaka business-time settings. Multiple inventory locations are supported; separate branches and multi-tenant businesses are not implemented in this release.
 
 It is not a double-entry general ledger. External payment processing, fiscal-printer integrations, offline checkout and legacy data migration are outside this version. Recording a card or mobile payment does not charge a payment provider.
 

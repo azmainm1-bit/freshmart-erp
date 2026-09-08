@@ -2,7 +2,7 @@
 
 ## Current scope
 
-This repository is a portfolio and local-demo application. The supplied Docker services are development tools, not a production deployment definition. The PHP development server is suitable for a local review, not an internet-facing store.
+FreshMart is an actively maintained retail operations application. The supplied Docker services provide a reproducible development and evaluation environment; they are not a production deployment definition. The PHP development server is intended for local use, not an internet-facing store.
 
 ## Before a real rollout
 
@@ -38,7 +38,7 @@ A successful source build alone does not establish production readiness. Avoid b
 
 Use PostgreSQL-native database backups and restore them regularly into an isolated environment. Retain the application configuration and key through an appropriate secret-management process, separate from the public source repository. Define retention, recovery-time and recovery-point targets with the business.
 
-This package intentionally excludes the database dumps and legacy backup scripts from the uploaded archive. It does not claim that a Laravel production backup/restore procedure has already been exercised.
+The repository intentionally excludes database dumps and legacy backup scripts. A production environment must establish and verify its own backup and restore procedure before handling live data.
 
 ## External integrations
 

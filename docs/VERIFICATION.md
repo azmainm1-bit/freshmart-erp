@@ -1,8 +1,8 @@
 # Verification notes
 
-Portfolio cleanup: 8 September 2026.
+Verification baseline: 8 September 2026.
 
-## Checks performed for this package
+## Checks performed for this release
 
 | Check | Result |
 | --- | --- |
@@ -16,13 +16,13 @@ Portfolio cleanup: 8 September 2026.
 | Laravel Pint | Passed |
 | Bash helper syntax | Passed |
 
-The local PHP checks used PHP 8.3.6 and the archive's Composer dependencies. Frontend checks used the supplied dependencies. These checks do not substitute for clean dependency installation or a running PostgreSQL feature suite.
+The local PHP checks used PHP 8.3.6 with locked Composer dependencies. Frontend checks used locked npm dependencies. These checks do not substitute for clean dependency installation or a running PostgreSQL feature suite.
 
 ## Full-runtime checks still required
 
 The editing environment did not provide Docker or a running PostgreSQL service. The complete database-backed feature suite, concurrency tests, demo seeding, reconciliation and Docker setup sequence were not rerun here. GitHub Actions is configured with PostgreSQL to run the backend tests after publication. Read the actual workflow result before treating that gate as passed.
 
-The source archive's previous README stated 103 tests and 471 assertions. Those historical counts are not reused as proof for this revision. A scaffold-only unit test that asserted `true` was removed; meaningful business tests remain.
+Earlier documentation stated 103 tests and 471 assertions. Those historical counts are not reused as proof for this release. A scaffold-only unit test that asserted `true` was removed; meaningful business tests remain.
 
 Fresh browser-based checkout and mobile interaction checks were not performed. The screenshot gallery comes from the uploaded project; the video is a captioned screenshot tour. See [media provenance](DEMO.md).
 
@@ -36,6 +36,6 @@ Fresh browser-based checkout and mobile interaction checks were not performed. T
 - Corrected the quoted application name in the example environment.
 - Replaced fixed Docker network assumptions with Compose service networking; published the local preview port and bound it to loopback.
 - Added a first-install demo helper that stops if an environment file already exists.
-- Rewrote the README and supporting setup, architecture and operating guides.
+- Updated the README and supporting setup, architecture and operating guides.
 
-This is a portfolio presentation and maintainability pass. It is not a penetration test, load test or production-readiness certification.
+This verification record covers maintainability, static analysis, unit tests and build checks. It is not a penetration test, load test or production-readiness certification.
